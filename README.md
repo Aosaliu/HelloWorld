@@ -1,7 +1,7 @@
 ## Hello World
 
 ### App Description
-Hello World App, introductory level for CodePath
+Hello World App, with a couple cool features :)
 
 <img src="https://user-images.githubusercontent.com/22160959/45589151-d29c8380-b8ee-11e8-818d-56826f3425a9.gif" width=200><br>
 
