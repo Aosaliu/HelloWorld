@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ViewBox: UIView!
     @IBOutlet weak var TEXTBUT: UIButton! //Text Changer Button
     @IBOutlet weak var TEXTCOLBUT: UIButton! //Text Color Button
-    @IBOutlet weak var TEXTBACKBUT: UIButton! //Background Button
+    @IBOutlet weak var TEXTBACKBUT: UIButton! //View Button
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,18 +40,23 @@ class ViewController: UIViewController {
     }
     
 
-    @IBAction func WordInBoxC(_ sender: Any) {
+    @IBAction func WordInBoxC(_ sender: Any) { //change text color
         TextInBox.textColor = UIColor.white
     }
-    @IBAction func BackgroundinBox(_ sender: Any) {
+    @IBAction func BackgroundinBox(_ sender: Any) { //change view color
         view.backgroundColor = UIColor.white
     }
-    @IBAction func TextChanger(_ sender: Any) {
-        //TextInBox.text = "Goodbye! Until Next Time"
-        TextInBox.text = TextBOX.text
+    @IBAction func TextChanger(_ sender: Any) { //change text
+        if(TextBOX.text?.isEmpty)!{
+           TextInBox.text = "Goodbye! 👋"
+        }else{
+            TextInBox.text = TextBOX.text
+            TextBOX.text = ""
+            view.endEditing(true)
+        }
     }
-    @IBAction func ResetBackground(_ sender: Any) {
-        TextInBox.text = "Hello Again!"
+    @IBAction func ResetBackground(_ sender: Any) { //resets
+        TextInBox.text = "Hello from Abdulrasaq!"
         TextInBox.textColor = UIColor.black
         view.backgroundColor = backGroundColor
     }
